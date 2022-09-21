@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/olisa187/clipboard-landing-page)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [clipboard-landing-page](https://olisa187-clipboard-landing-page.netlify.app/)
 
 ## My process
 
