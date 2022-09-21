@@ -1,0 +1,258 @@
+:root{
+	box-sizing: border-box;
+	--clr-Strong-Cyan: hsl(171, 66%, 44%);
+	--clr-Light-Blue: hsl(233, 100%, 69%);
+	--clr-Dark-Grayish-Blue: hsl(210, 10%, 33%);
+	--clr-Grayish-Blue: hsl(201, 11%, 66%);
+}
+
+
+*,
+*::before,
+*::after{
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+}
+
+img,
+image,
+picture{
+	max-width: 100%;
+	/* height: 100%; */
+}
+body{
+	font-family: 'Bai Jamjuree', sans-serif;
+	font-size: 1.125rem;
+	color: var(--clr-Grayish-Blue);
+	line-height: 1.5;
+	text-align: center;
+}
+
+p{
+	font-size: 17px;
+}
+
+main{
+	max-width: 90em;
+	margin: 0 auto;
+	padding: 0 1.5em 1em 1.5em
+}
+
+.container{
+	max-width: 60em;
+	margin-inline: auto;
+	overflow-x: hidden;
+}
+/* target the all element inside the container except their first child */
+.container * + *{
+	margin-top: 1em;
+}
+
+header{
+	background-image: url(./images/bg-header-mobile.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-block: 6em 3em;
+}
+
+h2{
+	color: var(--clr-Dark-Grayish-Blue);
+}
+/* button */
+.btn{
+	display: block;
+	color: hsl(0, 0%, 100%);
+	font-weight: 600;
+	padding: 1.5em;
+	width: 100%;
+	border: 0;
+	border-radius: 3em;
+	cursor: pointer;
+}
+div[class="download-btn"]{
+	padding-bottom: 1.8em
+}
+/* button for the ios link */
+.btn.btn-ios{
+	background-color: var(--clr-Strong-Cyan);
+	box-shadow: -5px 10px 20px -8px hsl(171 66% 44% / .6);
+}
+
+.btn.btn-ios:hover{
+	background-color: hsl(171 66% 44% / .6);
+}
+/* button for the mac link */
+.btn.btn-mac{
+	background-color: var(--clr-Light-Blue);
+	margin-top: 2em;
+	box-shadow: -5px 10px 20px -8px hsl(233 100% 69% / .6);
+}
+
+.btn.btn-mac:hover{
+	background-color: hsl(233 100% 69% / .6);
+}
+
+.grid > .right > div,
+.grid-3 > div,
+.social-icon > div{
+	margin-top: 4em;
+}
+
+
+
+.container-clipboard.track{
+	margin-block: 10em 4em;
+}
+
+.social-icon, footer{
+	margin-top: 10em;
+}
+
+footer{
+	background-color: hsla(201, 11%, 66%, .1);
+	padding-block: 3em 1em;
+	
+}
+
+.foot-logo{
+	max-width: 10%;
+	margin-inline: auto;
+}
+
+.social-links{
+	margin-block: 3em 1em;
+}
+
+.social-links > a{
+	display: inline-block;
+	margin-left: 1em;
+}
+
+.social-links > a:hover img{
+	border-color: var(--clr-Strong-Cyan);
+}
+
+.grid-3.g-foot, 
+.grid-3.g-foot > div{
+	margin-top: 2em;
+}
+.attribution { 
+	font-size: 11px; text-align: center; 
+	margin-top: 1em;
+}
+.attribution a { 
+	color: hsl(228, 45%, 44%); 
+	text-decoration: none;
+}
+
+/* media queries */
+@media (min-width: 401px){
+	body{
+		font-size: 14px;
+	}
+	header{
+		background-image: url(./images/bg-header-desktop.png);
+	}
+	
+	body p{
+		font-size: 16px;
+	}
+	
+	.grid-writeup.right{
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.grid-writeup.right > *{
+		flex: 1;
+		text-align: left;
+	}
+	
+	.btn{
+		display: inline-block;
+		max-width: 30%;
+	}
+	.btn.btn-ios{
+		margin-right: 10px;
+	}
+	
+	.grid{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 2em;
+	}
+	
+	.grid_image.left{
+		grid-column: 1/3;
+		grid-row: 1
+	}
+	.grid_image.left > img{
+		margin-left: -5em
+	}
+	.container .grid > .grid-writeup,
+	.container .grid > .grid-writeup *{ /* specifity issues used the .container to remove the speci*/
+		margin: 0;
+	}
+	
+	.grid-3{
+		grid-template-columns: repeat(3, 1fr);
+		align-items: center;
+		column-gap: 1em;
+	}
+	.container .grid-3  *{
+		margin: 0;
+	}
+	.center.device{
+		max-width: 70%;
+		margin-inline: auto;
+	}
+	
+	.clipboard-function{
+		margin-block: 4em 5em;
+	}
+	
+	.flex{
+		
+		display: flex;
+		align-items: center;
+	}
+	.social-icon{
+		margin-top: 3em;
+		gap: 3em;
+	}
+	.footer-upside.flex{
+		justify-content: start;
+		padding-inline: 3em;
+		max-width: 90em;
+		margin-inline: auto;
+	}
+	
+	.footer-upside.flex > *{
+		margin-top: 0;
+		margin-left: 6em;
+	}
+	
+	.footer-upside.flex > *:last-child{
+		margin-left: auto;
+		margin-right: 4em;
+	}
+	.foot-logo{
+		margin: 0;	
+	}
+	
+	.grid.grid-3.g-foot > *{
+		padding: 1em;
+		margin-top: 0;
+		text-align: left;
+	}
+	
+	.div-resize{
+		max-width: 40em;
+		margin-inline: auto;
+	}
+	
+	.heading{
+		font-size: 2rem;
+	}
+}
